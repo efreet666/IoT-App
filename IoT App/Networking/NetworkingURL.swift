@@ -8,7 +8,6 @@
 import Foundation
 
 final class NetworkingURLManager {
-    
     func stringToURL(urlString: String) -> URL? {
         let url: URL = URL(string: urlString)!
             return url
@@ -16,10 +15,7 @@ final class NetworkingURLManager {
 }
 
 enum URLString: String {
-    
     case DevicesURL = "https://api.fasthome.io/api/v1/test/devices"
-    
-    
 }
 
 

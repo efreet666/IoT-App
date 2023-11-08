@@ -11,46 +11,26 @@ final class URLSessionClient {
     
     private let networkingURLManager = NetworkingURLManager()
     
-//    func fetchCategoryData() -> Any? {
-//        
-//        var categoryData: CategoriesModel?
-//        
-//        let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
-//        let categoryRequest = Request(title: "")
-//        
-//        URLSessionManager().send(categoryRequest, URL: networkingURLManager.stringToURL(urlString: URLString.categoryURL.rawValue)!) { (result: Result<CategoriesModel, APIError>) -> Void in
-//            switch result {
-//            case .success(let data):
-//                print(data)
-//                categoryData = data
-//            case .failure(let error):
-//                print(error)
-//            }
-//            semaphore.signal()
-//        }
-//        semaphore.wait()
-//        
-//        return nil
-//        
-//    }
-//    
-//    func fetchEventData() -> EventModel {
-//        var eventData: EventModel?
-//        let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
-//        
-//            let categoryRequest = Request(title: "")
-//            URLSessionManager().send(categoryRequest, URL: networkingURLManager.stringToURL(urlString: URLString.categoryURL.rawValue)!) { (result: Result<EventModel, APIError>) -> Void in
-//                switch result {
-//                case .success(let data):
-//                    print(data)
-//                    eventData = data
-//                case .failure(let error):
-//                    print(error)
-//                }
-//                semaphore.signal()
-//            }
-//            semaphore.wait()
-//        
-//        return eventData ?? EventModel()
-//    }
+    func fetchDeviceData() -> DeviceListModel? {
+        
+        var deviceModel: DeviceListModel?
+        
+        let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
+        let categoryRequest = Request(title: "")
+        
+		URLSessionManager().send(categoryRequest, URL: networkingURLManager.stringToURL(urlString: URLString.DevicesURL.rawValue)!) { (result: Result<DeviceListModel, APIError>) -> Void in
+            switch result {
+            case .success(let data):
+                print(data)
+				deviceModel = data
+            case .failure(let error):
+                print(error)
+            }
+            semaphore.signal()
+        }
+        semaphore.wait()
+        
+        return deviceModel
+    }
+
 }

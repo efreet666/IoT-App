@@ -8,21 +8,15 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-//    func fetchCategoryData() -> CategoriesModel
-//    func fetchEventData() -> EventModel
+	func fetchDeviceData() -> DeviceListModel?
 }
 
 final class NetworkManager: NetworkManagerProtocol {
     
     private let urlSessionClient = URLSessionClient()
 
-    
-     func fetchCategoryData() {
-        
-		
+     func fetchDeviceData() -> DeviceListModel? {
+		 urlSessionClient.fetchDeviceData()
     }
     
-    func fetchEventData() {
-        
-    }
 }
