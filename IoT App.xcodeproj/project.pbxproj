@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		F554554C2AFBC2150085E3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554554B2AFBC2150085E3B1 /* AppDelegate.swift */; };
 		F554554E2AFBC2150085E3B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554554D2AFBC2150085E3B1 /* SceneDelegate.swift */; };
-		F55455502AFBC2150085E3B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554554F2AFBC2150085E3B1 /* ViewController.swift */; };
-		F55455532AFBC2150085E3B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55455512AFBC2150085E3B1 /* Main.storyboard */; };
+		F55455502AFBC2150085E3B1 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554554F2AFBC2150085E3B1 /* DeviceListViewController.swift */; };
 		F55455552AFBC2160085E3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55455542AFBC2160085E3B1 /* Assets.xcassets */; };
 		F55455582AFBC2160085E3B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55455562AFBC2160085E3B1 /* LaunchScreen.storyboard */; };
+		F55455632AFBC3FF0085E3B1 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554555F2AFBC3FF0085E3B1 /* URLSessionClient.swift */; };
+		F55455642AFBC3FF0085E3B1 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55455602AFBC3FF0085E3B1 /* URLSessionManager.swift */; };
+		F55455652AFBC3FF0085E3B1 /* NetworkingURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55455612AFBC3FF0085E3B1 /* NetworkingURL.swift */; };
+		F55455662AFBC3FF0085E3B1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55455622AFBC3FF0085E3B1 /* NetworkManager.swift */; };
+		F55455692AFBC51E0085E3B1 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55455682AFBC51E0085E3B1 /* DeviceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F55455482AFBC2150085E3B1 /* IoT App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IoT App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F554554B2AFBC2150085E3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F554554D2AFBC2150085E3B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F554554F2AFBC2150085E3B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F55455522AFBC2150085E3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F554554F2AFBC2150085E3B1 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		F55455542AFBC2160085E3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F55455572AFBC2160085E3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F55455592AFBC2160085E3B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F554555F2AFBC3FF0085E3B1 /* URLSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
+		F55455602AFBC3FF0085E3B1 /* URLSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
+		F55455612AFBC3FF0085E3B1 /* NetworkingURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingURL.swift; sourceTree = "<group>"; };
+		F55455622AFBC3FF0085E3B1 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F55455682AFBC51E0085E3B1 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		F554554A2AFBC2150085E3B1 /* IoT App */ = {
 			isa = PBXGroup;
 			children = (
-				F554554B2AFBC2150085E3B1 /* AppDelegate.swift */,
-				F554554D2AFBC2150085E3B1 /* SceneDelegate.swift */,
-				F554554F2AFBC2150085E3B1 /* ViewController.swift */,
-				F55455512AFBC2150085E3B1 /* Main.storyboard */,
+				F554556B2AFBC54E0085E3B1 /* Application */,
+				F554556A2AFBC5400085E3B1 /* Model */,
+				F554554F2AFBC2150085E3B1 /* DeviceListViewController.swift */,
+				F55455672AFBC4060085E3B1 /* Networking */,
 				F55455542AFBC2160085E3B1 /* Assets.xcassets */,
 				F55455562AFBC2160085E3B1 /* LaunchScreen.storyboard */,
 				F55455592AFBC2160085E3B1 /* Info.plist */,
 			);
 			path = "IoT App";
+			sourceTree = "<group>";
+		};
+		F55455672AFBC4060085E3B1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F55455622AFBC3FF0085E3B1 /* NetworkManager.swift */,
+				F554555F2AFBC3FF0085E3B1 /* URLSessionClient.swift */,
+				F55455602AFBC3FF0085E3B1 /* URLSessionManager.swift */,
+				F55455612AFBC3FF0085E3B1 /* NetworkingURL.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F554556A2AFBC5400085E3B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F55455682AFBC51E0085E3B1 /* DeviceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F554556B2AFBC54E0085E3B1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F554554B2AFBC2150085E3B1 /* AppDelegate.swift */,
+				F554554D2AFBC2150085E3B1 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +163,6 @@
 			files = (
 				F55455582AFBC2160085E3B1 /* LaunchScreen.storyboard in Resources */,
 				F55455552AFBC2160085E3B1 /* Assets.xcassets in Resources */,
-				F55455532AFBC2150085E3B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +173,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55455502AFBC2150085E3B1 /* ViewController.swift in Sources */,
+				F55455502AFBC2150085E3B1 /* DeviceListViewController.swift in Sources */,
 				F554554C2AFBC2150085E3B1 /* AppDelegate.swift in Sources */,
 				F554554E2AFBC2150085E3B1 /* SceneDelegate.swift in Sources */,
+				F55455662AFBC3FF0085E3B1 /* NetworkManager.swift in Sources */,
+				F55455652AFBC3FF0085E3B1 /* NetworkingURL.swift in Sources */,
+				F55455692AFBC51E0085E3B1 /* DeviceModel.swift in Sources */,
+				F55455632AFBC3FF0085E3B1 /* URLSessionClient.swift in Sources */,
+				F55455642AFBC3FF0085E3B1 /* URLSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F55455512AFBC2150085E3B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F55455522AFBC2150085E3B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F55455562AFBC2160085E3B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +329,6 @@
 				INFOPLIST_FILE = "IoT App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +356,6 @@
 				INFOPLIST_FILE = "IoT App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
