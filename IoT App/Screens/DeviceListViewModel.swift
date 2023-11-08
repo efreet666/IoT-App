@@ -31,7 +31,16 @@ final class DeviceListViewModel: DeviceListViewModelProtocol {
 			df.dateFormat = "yyyy-MM-dd"
 			let lastWork = df.string(from: Date(timeIntervalSince1970: TimeInterval(deviceData.lastWorkTime)))
 			
-			deviceItems.append(DeviceItem(id: deviceData.id, name: deviceData.name, icon: UIImage(named: "\(deviceData.icon)"), isOnline: deviceData.isOnline, type: deviceData.type, status: deviceData.status, lastWorkTime: lastWork))
+			var icon: UIImage?
+			switch deviceData.icon {
+			case "/img/test/1.svg":
+				icon = UIImage(named: "imgtest1")
+			case "/img/test/2.svg":
+				icon = UIImage(named: "imgtest2")
+			default:
+				print("unknown")
+			}
+			deviceItems.append(DeviceItem(id: deviceData.id, name: deviceData.name, icon: icon, isOnline: deviceData.isOnline, type: deviceData.type, status: deviceData.status, lastWorkTime: lastWork))
 		})
 		return deviceItems
 	}

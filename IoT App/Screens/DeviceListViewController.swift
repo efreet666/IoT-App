@@ -33,25 +33,29 @@ final class DeviceListViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.view.backgroundColor = .white
-//		viewModel.getDeviceListData()
+		self.view.backgroundColor = .black
+		self.title = "Умные вещи"
 		setupTableView()
 	}
 
 	private func setupTableView() {
 		view.addSubview(tableView)
 		tableView.snp.makeConstraints { make in
-			make.edges.equalToSuperview()
+			make.leading.equalToSuperview().inset(30)
+			make.trailing.equalToSuperview().inset(30)
+			make.top.equalToSuperview().inset(100)
+			make.bottom.equalToSuperview()
 		}
 		
 		tableView.register(DeviceTableViewCell.self, forCellReuseIdentifier: DeviceTableViewCell.reuseIdentifier)
 		tableView.delegate = self
-		
+		tableView.rowHeight = 200
+		tableView.backgroundColor = .black
 		dataSource = UITableViewDiffableDataSource<Section, DeviceItem>(tableView: tableView) { tableView, indexPath, item in
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: DeviceTableViewCell.reuseIdentifier,
 														   for: indexPath) as? DeviceTableViewCell else { return UITableViewCell() }
 			cell.selectionStyle = .none
-			cell.accessoryType = .disclosureIndicator
+			cell.accessoryType = .none
 			cell.setup(with: item)
 	
 			return cell
@@ -81,9 +85,7 @@ final class DeviceListViewController: UIViewController {
 extension DeviceListViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		guard indexPath.row < viewModel.groupedProductsValues.count else { return }
-//		let vc = TransactionDetailViewController(productModel: viewModel.groupedProductsValues[indexPath.row])
-//		self.navigationController?.pushViewController(vc, animated: true)
+		// didSelectRowAt
 	}
 }
 
